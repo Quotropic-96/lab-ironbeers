@@ -27,10 +27,18 @@ app.get('/beers', (req, res) => {
     .getBeers()
     .then(beersFromApi => {
       res.render('beers', {data: beersFromApi});
-      console.log('Beers from the database: ', {data: beersFromApi})
     })
     .catch(error => console.log(error));
-  
+})
+
+app.get('/random-beer', (req, res) => {
+  punkAPI
+    .getRandom()
+    .then(randomBeer => {
+      res.render('random-beer', randomBeer[0]);
+      console.log(randomBeer[0]);
+    })
+    .catch(error => console.log(error));
 })
 
 app.listen(3000, () => console.log('🏃‍ on port 3000'));
