@@ -1,5 +1,7 @@
-<div id="radnom-beer">
+<div id="random-beer">
     {{> beerpartial this}}
-    <p>{{this.food_pairing}}</p>
-    <p>{{this.brewers_tips}}</p>
+    <div class="random-info">
+        <p>Food Pairing: {{this.food_pairing}}</p>
+        <p>Brewer Tips: {{this.brewers_tips}}</p>
+    </div> 
 </div>
