@@ -5,12 +5,50 @@ dark-blue: #0a2c42;
 grey: #bfbfbf;
 font-family: Arial, Helvetica, sans-serif;
 */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
 body {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Merriweather', serif;
+    height: 100vh;
 }
+a {
+    text-decoration: none;
+    color: 	#000809;
+}
+/* Layout */
+.nav-bar {
+    width: 100%;
+    height: 10%;
+    background-color: #E6A377;
+    display: flex;
+    align-items: center;
+}
+.nav-bar ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin-left: 30px;
+}
+footer {
+    width: 100%;
+    height: 5%;
+    background-color: #997157;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+}
+footer p {
+    margin-left: 30px;
+}
+
+/* Home Page */
 #home {
+    height: 80%;
+    margin: 30px 0;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap: 50px;
 }
@@ -18,4 +56,18 @@ body {
 #home img {
     width: 200px;
     height: auto;
+}
+.btn-container {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+.btn-container a {
+    height: 40px;
+    background-color: #99DAE8;
+    border: 1px solid #99DAE8;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
 }
