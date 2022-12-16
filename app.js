@@ -36,9 +36,19 @@ app.get('/random-beer', (req, res) => {
     .getRandom()
     .then(randomBeer => {
       res.render('random-beer', randomBeer[0]);
-      console.log(randomBeer[0]);
     })
     .catch(error => console.log(error));
 })
+//Didn't get the 2nd bonus...
+
+// app.get('/specific-beer', (req, res) => {
+//   punkAPI
+//     .getBeer(296)
+//     .then(specificBeer => {
+//       res.render('specific-beer', specificBeer[0]);
+//       console.log(specificBeer);
+//     })
+//     .catch(error => console.log(error));
+// })
 
 app.listen(3000, () => console.log('🏃‍ on port 3000'));
